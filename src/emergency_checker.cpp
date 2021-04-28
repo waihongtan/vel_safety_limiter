@@ -42,7 +42,7 @@
         double roll, pitch, yaw;
         m.getRPY(roll, pitch, yaw);
         rotate_flag_ = (roll != 0) ? true : false;
-        int angle = round((yaw-0.78)*100);
+        int angle = round((yaw+2.35)*100);
         shift_angle_ = (angle - std::floor(angle / 314 + 0.1) * 314)/100;
         std::cout<< roll<<pitch<<yaw<<shift_angle_<<std::endl;
 
